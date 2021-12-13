@@ -20,6 +20,12 @@ public class Availability {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Integer id;
+    /*
+    * @ManyToOne
+	@JoinColumn(name = "practitioner_Id", nullable = false)
+    * private Practitioner practitionerId;
+    * to set the relation between this two entity in the ORM layer
+    * */
     private Integer practitionerId;
     private LocalDateTime startDate;
     private LocalDateTime endDate;
